@@ -1,0 +1,16 @@
+import java.lang.Number;
+import com.total.anac.model.Sample;
+
+rule "REGLE 07_1"
+	dialect "mvel"
+	salience 3
+	agenda-group "test_group_3"
+	lock-on-active true
+	when
+		sample : Sample( compUp == 0 )
+	then
+		modify( sample ) {
+				setCompUp( 10 )
+		}
+		sample.addComment( 1 );
+end

@@ -1,0 +1,13 @@
+import java.lang.Number;
+import com.total.anac.model.Sample;
+
+rule "REGLE 15_3"
+	dialect "mvel"
+	agenda-group "test_group_0"
+	salience 1
+	when
+		sample : Sample( measUp == 20 )
+	then
+		sample.setCompUp( 0 );
+		sample.addComment( 3 );
+end
