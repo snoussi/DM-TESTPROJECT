@@ -1,10 +1,8 @@
 import com.total.anac.model.Sample;
 
-rule "REGLE 10_1"
+rule "REGLE 16_1"
 	dialect "mvel"
-	salience 3
 	agenda-group "test_group_4"
-	lock-on-active true
 	when
 		sample : Sample( compUp == 0 )
 	then

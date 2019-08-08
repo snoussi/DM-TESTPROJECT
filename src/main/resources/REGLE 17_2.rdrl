@@ -1,12 +1,13 @@
 import com.total.anac.model.Sample;
 
-rule "REGLE 14_2"
+rule "REGLE 17_2"
 	dialect "mvel"
-	salience 2
-	agenda-group "test_group_0"
+	agenda-group "test_group_4"
 	when
 		sample : Sample( compUp == 10 )
 	then
-		sample.setMeasUp( 20 );
+		modify( sample ) {
+				setMeasUp( 20 )
+		}
 		sample.addComment( 2 );
 end

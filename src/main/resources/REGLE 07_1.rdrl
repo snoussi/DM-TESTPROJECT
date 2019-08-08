@@ -1,4 +1,3 @@
-import java.lang.Number;
 import com.total.anac.model.Sample;
 
 rule "REGLE 07_1"
